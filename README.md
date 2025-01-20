@@ -1,4 +1,8 @@
-# Posts custom WordPress plugin
+# Parks custom post type plugin
 
-A simple WordPress plugin that registers a custom post type, implement a custom taxonomy, and
-includes a short code to display and filter a list of those posts.
+Create a custom post type called “Parks” with the following fields:
+
+-   Name
+-   Location
+-   Hours (weekday, weekends)
+-   Short description
