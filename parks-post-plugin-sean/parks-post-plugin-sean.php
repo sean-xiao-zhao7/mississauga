@@ -24,7 +24,10 @@ class ParksPostPluginSean
         $args = [
             'public' => true,
             'has_archive' => true,
-            'supports' => ['title']
+            'supports' => ['name', 'location', 'hours', 'description'],
+            'capability' => 'manage_options',
+            'labels' => ['name' => 'Parks', 'singular_name' => 'Park'],
+            'menu_icon' => 'dashicons-palmtree'
         ];
     }
 }
