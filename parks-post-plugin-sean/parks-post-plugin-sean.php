@@ -1,4 +1,4 @@
-<?php
+<th?php
 
 /** 
  * Name: ParksPostPluginSean
@@ -44,8 +44,22 @@ class ParksPostPluginSean
     {
 ?>
         <h1>All Parks</h1>
-        <ul></ul>
-<?php
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Hours (weekday, weekends)</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                ?>
+            </tbody>
+        </table>
+    <?php
     }
 }
 
