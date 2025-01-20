@@ -17,6 +17,7 @@ class ParksPostPluginSean
     public function __construct()
     {
         add_action('init', [$this, 'create_post_type']);
+        add_action('wp_enqueue_scripts', ['load_assets']);
     }
 
     public function create_post_type()
@@ -29,6 +30,13 @@ class ParksPostPluginSean
             'labels' => ['name' => 'Parks', 'singular_name' => 'Park'],
             'menu_icon' => 'dashicons-palmtree'
         ];
+
+        register_post_type('parks_post_sean', $args);
+    }
+
+    public function load_assets()
+    {
+        wp_enqueue_style('parks_post_sean', plugin_dir_url(__FILE__) . '/styles/main.css', [], 1, 'all');
     }
 }
 
