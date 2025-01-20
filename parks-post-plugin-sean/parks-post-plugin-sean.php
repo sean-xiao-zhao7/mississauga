@@ -1,4 +1,4 @@
-<th?php
+<?php
 
 /** 
  * Name: ParksPostPluginSean
@@ -59,8 +59,7 @@ class ParksPostPluginSean
                 ?>
             </tbody>
         </table>
-    <?php
+<?php
     }
 }
-
 new ParksPostPluginSean;

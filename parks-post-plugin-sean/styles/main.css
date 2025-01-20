@@ -1,10 +1,18 @@
-h1 {
+#parks-list {
+    font-family: Gotham SSm A, Gotham SSm B, Helvetica, Arial, sans-serif;
+    color: #2e2e2e;
+}
+
+#parks-list h1 {
     font-family: Gotham SSm A, Gotham SSm B, Helvetica, Arial, sans-serif;
     font-weight: 500;
     line-height: 1.2;
 }
 
-p {
+#parks-list p,
+#parks-list table tr td,
+#parks-list table tr th {
+    font-family: Gotham SSm A, Gotham SSm B, Helvetica, Arial, sans-serif;
     font-size: 0.8rem;
     color: #2e2e2e;
 }
