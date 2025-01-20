@@ -1,3 +1,8 @@
+#parks-list-container {
+    padding: 1rem;
+    background-color: "white";
+}
+
 #parks-list {
     font-family: Gotham SSm A, Gotham SSm B, Helvetica, Arial, sans-serif;
     color: #2e2e2e;

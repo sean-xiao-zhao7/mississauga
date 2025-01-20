@@ -43,22 +43,24 @@ class ParksPostPluginSean
     public function show_parks_list()
     {
 ?>
-        <h1>All Parks</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Location</th>
-                    <th>Hours (weekday, weekends)</th>
-                    <th>Description</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
+        <div id="parks-list-container">
+            <h1>All Parks</h1>
+            <table id="parks-list">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Hours (weekday, weekends)</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
 
-                ?>
-            </tbody>
-        </table>
+                    ?>
+                </tbody>
+            </table>
+        </div>
 <?php
     }
 }
