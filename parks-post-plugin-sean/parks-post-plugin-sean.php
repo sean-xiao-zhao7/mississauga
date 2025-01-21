@@ -16,12 +16,12 @@ class ParksPostPluginSean
 {
     public function __construct()
     {
-        add_action('init', [$this, 'create_post_type']);
-        add_action('wp_enqueue_scripts', [$this, 'load_assets']);
-        add_shortcode('show-parks-list', [$this, 'show_parks_list']);
+        add_action('init', [$this, 'ppps_create_post_type']);
+        add_action('wp_enqueue_scripts', [$this, 'ppps_load_assets']);
+        add_shortcode('show-parks-list', [$this, 'ppps_show_parks_list']);
     }
 
-    public function create_post_type()
+    public function ppps_create_post_type()
     {
         $args = [
             'public' => true,
@@ -35,12 +35,12 @@ class ParksPostPluginSean
         register_post_type('parks_post_sean', $args);
     }
 
-    public function load_assets()
+    public function ppps_load_assets()
     {
         wp_enqueue_style('parks_post_sean', plugin_dir_url(__FILE__) . 'styles/main.css', [], 1, 'all');
     }
 
-    public function show_parks_list()
+    public function ppps_show_parks_list()
     {
 ?>
         <div id="parks-list-container">
