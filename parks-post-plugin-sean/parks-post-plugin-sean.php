@@ -1,7 +1,7 @@
 <?php
 
 /** 
- * Plugin Name: ParksPostPluginSean
+ * Plugin Name: Parks Post Plugin (Sean)
  * Description: A plugin that registers the parks custom post type.
  * Author: Sean Xiao
  * Version: 1.0.0
@@ -14,11 +14,36 @@ if (! defined('ABSPATH')) {
 
 class Parks_Post_Plugin_Sean
 {
+
+    /**
+     * Static property to hold our singleton instance
+     *
+     */
+    private static $instance = false;
+
+    /**
+     * This is our constructor
+     *
+     * @return void
+     */
     private function __construct()
     {
         add_action('init', [$this, 'ppps_create_post_type']);
         add_action('wp_enqueue_scripts', [$this, 'ppps_load_assets']);
         add_shortcode('show-parks-list', [$this, 'ppps_show_parks_list']);
+    }
+
+    /**
+     * If an instance exists, this returns it.  If not, it creates one and
+     * retuns it.
+     *
+     * @return Parks_Post_Plugin_Sean
+     */
+    public static function getInstance()
+    {
+        if (!self::$instance)
+            self::$instance = new self;
+        return self::$instance;
     }
 
     public function ppps_create_post_type()
@@ -64,4 +89,6 @@ class Parks_Post_Plugin_Sean
 <?php
     }
 }
-new ParksPostPluginSean;
+
+// Instantiate our class
+$Parks_Post_Plugin_Sean = Parks_Post_Plugin_Sean::getInstance();
