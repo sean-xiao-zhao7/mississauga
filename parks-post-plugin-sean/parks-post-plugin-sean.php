@@ -1,20 +1,20 @@
 <?php
 
 /** 
- * Name: ParksPostPluginSean
+ * Plugin Name: ParksPostPluginSean
  * Description: A plugin that registers the parks custom post type.
  * Author: Sean Xiao
  * Version: 1.0.0
  * Text Domain: parks-post-plugin-sean
  */
 
-if (!defined('ABSPATH')) {
-    exit;
+if (! defined('ABSPATH')) {
+    exit; // Exit if accessed directly
 }
 
-class ParksPostPluginSean
+class Parks_Post_Plugin_Sean
 {
-    public function __construct()
+    private function __construct()
     {
         add_action('init', [$this, 'ppps_create_post_type']);
         add_action('wp_enqueue_scripts', [$this, 'ppps_load_assets']);
